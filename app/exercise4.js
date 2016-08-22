@@ -8,19 +8,13 @@
             var count = 0;
 
             for(var i=0; i<this.length; i++) {
-                switch(this[i]) {
+                switch(this[i].toLowerCase()) {
                     case 'a': count++; break;
-                    case 'A': count++; break;
                     case 'e': count++; break;
-                    case 'E': count++; break;
                     case 'i': count++; break;
-                    case 'I': count++; break;
                     case 'o': count++; break;
-                    case 'O': count++; break;
                     case 'u': count++; break;
-                    case 'U': count++; break;
                     case 'y': count++; break;
-                    case 'Y': count++; break;
                 }
             }
 
