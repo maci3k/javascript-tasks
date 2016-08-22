@@ -21,17 +21,17 @@
         findTheBiggestBox: function (x, y, z)
         {
             if(typeof x === 'number' && typeof y === 'number' && typeof z === 'number') {
-                var boxX = 3*x + y + z;
-                var boxY = x + y*y + z;
-                var boxZ = x + y + y+z;
+                var boxX = (3*x) * y * z;
+                var boxY = x * (y*y) * z;
+                var boxZ = x * y * (y+z);
 
-                if(boxX > boxY && boxX > boxZ) {
+                if(boxX >= boxY && boxX >= boxZ) {
                     return 1;
                 }
-                if(boxY > boxX && boxY > boxZ) {
+                if(boxY >= boxX && boxY >= boxZ) {
                     return 2;
                 }
-                if(boxZ > boxX && boxZ > boxY) {
+                if(boxZ >= boxX && boxZ >= boxY) {
                     return 3;
                 }
             }
